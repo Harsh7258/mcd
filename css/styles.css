@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 10px;
+    --font-family1: 'Manrope', sans-serif;
+    --font-family2: 'Edu NSW ACT Foundation', cursive;
+    --color1: #FADB3F;
+    --color2: #ef6666;
+    --color3: #F8F6F6;
+    --color4: #27332D;
+}
+body{
+    background-color: var(--color3);
+    overflow-x: hidden;
+}
+
+/*scrolling bar*/
+
+body::-webkit-scrollbar {
+    width: 0.9rem;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--color3);
+  }
+  body::-webkit-scrollbar-thumb {
+    background: var(--color1);
+    border-radius: 0.8rem;
+    height: 6rem;
+  }
+
+  /*nav bar*/
+
+.navbar{
+    background-color: var(--color2);
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 1.7rem;
+}
+.logo-img{
+    width: 5.4rem;
+    height: 5.4rem;
+    margin-top: 0.4rem;
+    margin-left: 2rem;
+}
+.nav-link{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--font-family1);
+}
+.link{
+    color: var(--color3);
+    text-decoration: none;
+}
+.link:hover{
+    color: var(--color1);
+}
+.search-bar{
+    border: none;
+    width: 11rem;
+    height: 2.8rem;
+    border-radius: 0.8rem;
+}
+.search-bar:hover, input[type=text]:hover, select:hover, input[type=email]:hover, input[type=password]:hover{
+    border-color: var(--color1);
+    box-shadow: 0 0 2rem var(--color1);
+}
+.search-bar:focus{
+    outline: none;
+}
+
+/*header page*/
+
+.home-page{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.div-1, .div-2{
+    background: var(--color1);
+    height: 45vh;
+    width: 65%;
+    background: linear-gradient(to right, rgba(234, 86, 86,0.7),rgba(255, 125, 125,0.5));
+    border-radius: 0.8rem;
+    position: relative;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+.home-img, .home-img1{
+    height: 80%;
+    position: absolute;
+    left: 53%;
+    top: 5%;
+    /* left: 44.5rem;
+    top: 3rem; */
+    z-index: 2;
+}
+.home-img1:hover{
+    transition: anime all 1s infinite ease-in-out alternate;
+}
+@keyframes  anime{
+    100%{
+        transform: translateY(2rem);
+        box-shadow: 0 4rem 1rem -1.8rem rgba(0, 0, 0, 0.2), 0 4rem 1.6rem -1.2rem rgba(0, 0, 0, 0.2);
+    }
+}
+.home-text{
+    text-align: center;
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    z-index: 3;
+    font-size: 1.6rem;
+    color: var(--color3);
+    font-family: var(--font-family2);
+    
+}
+.home-btn, .order-btn{
+background-color: var(--color1);
+}
+.home-btn, .order-btn, input[type=submit]{
+    width: 16rem;
+    border-radius: 0.8rem;
+    border: none;
+    padding: 0.8rem;
+    color: var(--color3);
+    margin: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.home-btn:hover, .order-btn:hover, input[type=submit]:hover{
+    width: 17.5rem;
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+/*order*/
+
+.order{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+.order-cate{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6rem;
+}
+.menu-btn{
+    width: 17rem;
+    background-color: var(--color3);
+    border: none;
+    color: var(--color2);
+    border-radius: 0.8rem;
+    font-family: var(--font-family2);
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.3rem;
+    position: relative;
+}
+.menu-btn:after{
+    content: "";
+    position: absolute;
+    background-color: var(--color2);
+    height: 0.3rem;
+    width: 0;
+    left: 0;
+    bottom: -1rem;
+    transition: 0.3s ease-in;
+}
+.menu-btn:hover{
+     color: var(--color2);
+}
+.menu-btn:hover:after{
+    width: 100%;
+}
+ 
+/*cards*/
+
+.menu-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 2rem;
+    gap: 0.7rem;
+    row-gap: 1rem;
+}
+.card{
+    width: 100%;
+    border-radius: 0.8rem;
+}
+.card:hover{
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.3);
+}
+.card-img{
+    width: 100%;
+    height: 25rem;
+    border-radius: 0.8rem;
+}
+
+/*form*/
+
+.login-form{
+    width: 100%;
+    height: 80vh;
+    border-radius: 0.8rem;
+    background: linear-gradient(to right, #eca8a8, #f5dfdf);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--color3);
+}
+.glass-bg{
+    height: 65%;
+    width: 60rem;
+    background: linear-gradient(to right, rgba(253, 118, 118, 0.5),rgba(255, 206, 209, 0.5));
+    border-radius:0.8rem ;
+    z-index: 2;
+    backdrop-filter: blur(0.4rem);
+}
+input[type=text], select, input[type=email], input[type=password] {
+    width: 90%;
+    padding: 1.2rem;
+    resize: vertical;
+    border-radius: 0.8rem;
+    border: none;
+    margin-top: 0.6rem;
+    background: rgba(255, 206, 209, 0.3);
+    color: var(--color2);
+    outline: none;
+  }
+  
+  label {
+    padding: 1.2rem 1.2rem 1.2rem 0;
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  
+  input[type=submit] {
+    float: right;
+    margin-right: 4.8rem;
+  }
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 0.6rem;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 0.6rem;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+input[type=submit]{
+     background-color: #ff7777;
+}
+
+.circle1, .circle2{
+    background: var(--color3);
+    background: linear-gradient(to right, rgba(238, 113, 113, 0.9), rgba(255, 200, 204,0.3));
+    height: 18rem;
+    width: 18rem;
+    position: absolute;
+    border-radius: 50%;
+}
+.circle1{
+    top: 60%;
+    left: 17%;
+}
+.circle2{
+    top: 5%;
+    left: 67%;
+}
+
+/* footer*/
+
+.social-links, .about, .copyright{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+     margin: 5rem;
+     margin-bottom: 1rem;
+}
+.social-links a, .about-link a{
+    margin-left: 4rem;
+}
+.slink{
+    font-size: 3rem;
+    color: var(--color4);
+    transition: all 0.5s ease-in-out;
+}
+.slink:hover{
+    color: var(--color2);
+    font-size: 3.5rem;
+}
+.about-link a, .copyright p{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--color4);
+}
